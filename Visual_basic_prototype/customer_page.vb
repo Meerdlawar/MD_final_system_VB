@@ -260,6 +260,7 @@ Public Class customer_page
     Private Sub btncustomerBack_Click(sender As Object, e As EventArgs) Handles btncustomerBack.Click
         Me.Hide()
         main_menu.Show()
+        cleartxtbox()
     End Sub
 
     Private Sub btnproductAdd_Click(sender As Object, e As EventArgs) Handles btncustomerAdd.Click
@@ -320,6 +321,7 @@ Public Class customer_page
             If Char.IsLetter(e.KeyChar) Then
             Else
                 e.Handled = True
+                e.Handled = Not (e.KeyChar = "@" Or e.KeyChar = ".")
             End If
         End If
     End Sub
