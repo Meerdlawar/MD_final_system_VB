@@ -312,4 +312,6 @@ Public Class customer_page
     Private Sub txtCustomerSubfix_TextChanged(sender As Object, e As EventArgs) Handles txtCustomerSubfix.TextChanged
         saveFunc()
     End Sub
+
+
 End Class

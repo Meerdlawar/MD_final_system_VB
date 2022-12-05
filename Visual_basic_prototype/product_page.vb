@@ -2,8 +2,7 @@
 
 Public Class product_page
     Dim ID As String = ""
-
-
+    Dim str As String
 
     Private Sub product_page_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' the sub loadDatagirdView is called
@@ -40,13 +39,9 @@ Public Class product_page
 
 
     Private Sub AddRecord()
-
-        ' displays error message if text boxes are empty
         If txtProductName.Text = "" Or txtProductPrice.Text = "" Or txtProductType.Text = "" Or txtDietInquiries.Text = "" Then
             MessageBox.Show("All fields Are Required", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
-
-
             ' try catch that displays an error message if the query fails
             Try
                 ' query inserts data into the respective fields using parameters to avoid SQL injeciton
@@ -73,9 +68,7 @@ Public Class product_page
             ' load data grid view function is called
             loadDatagridView()
             cleartxtbox()
-
         End If
-
     End Sub
 
 
@@ -117,8 +110,6 @@ Public Class product_page
         If txtProductName.Text = "" Or txtProductPrice.Text = "" Or txtProductType.Text = "" Or txtDietInquiries.Text = "" Then
             MessageBox.Show("All fields Are Required", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
-
-
             Try
                 ' verifies with the user whether they want to edit a record
                 If MsgBox("Are you sure you want to edit this record?", MsgBoxStyle.Question + MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
@@ -159,7 +150,6 @@ Public Class product_page
             loadDatagridView()
             ' clears all textboxes
             cleartxtbox()
-
         End If
     End Sub
 
@@ -210,7 +200,6 @@ Public Class product_page
         txtDietInquiries.Clear()
     End Sub
 
-
     Sub controls1()
         ' enables use of add button
         btnproductAdd.Enabled = True
@@ -246,7 +235,6 @@ Public Class product_page
         End If
     End Sub
 
-
     Private Sub productDGV_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles productDGV.CellContentClick
         ' the product ID textbox is associated with row 0
         ID = productDGV.CurrentRow.Cells(0).Value.ToString
@@ -260,12 +248,10 @@ Public Class product_page
         txtDietInquiries.Text = productDGV.CurrentRow.Cells(4).Value.ToString
     End Sub
 
-
     Private Sub btnProductSave_Click(sender As Object, e As EventArgs) Handles btnProductSave.Click
         ' edit record funtion is called
         EditRecord()
     End Sub
-
 
     Private Sub btnProductCancel_Click(sender As Object, e As EventArgs) Handles btnProductCancel.Click
         ' clears all textboces
@@ -274,12 +260,10 @@ Public Class product_page
         Call controls1()
     End Sub
 
-
     Private Sub btnproductDelete_Click(sender As Object, e As EventArgs) Handles btnproductDelete.Click
         ' when the delete button is clicked a record is deleted
         DeleteRecord()
     End Sub
-
 
     Private Sub btnProductClear_Click(sender As Object, e As EventArgs) Handles btnProductClear.Click
         ' clears all the text boxes
@@ -292,7 +276,6 @@ Public Class product_page
         searchItem()
     End Sub
 
-
     Private Sub btnproductBack_Click(sender As Object, e As EventArgs) Handles btnproductBack.Click
         ' displays main menu
         main_menu.Show()
@@ -300,12 +283,10 @@ Public Class product_page
         Me.Hide()
     End Sub
 
-
     Private Sub btnproductAdd_Click(sender As Object, e As EventArgs) Handles btnproductAdd.Click
         ' add record funtion is called
         AddRecord()
     End Sub
-
 
     Private Sub txtProductName_TextChanged(sender As Object, e As EventArgs) Handles txtProductName.TextChanged
         ' saveFunc is called
@@ -325,5 +306,49 @@ Public Class product_page
     Private Sub txtDietInquiries_TextChanged(sender As Object, e As EventArgs) Handles txtDietInquiries.TextChanged
         ' saveFunc is called
         saveFunc()
+    End Sub
+
+    Private Sub txtProductPrice_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtProductPrice.KeyPress
+        ' does not allow the input of any characters other than backspace
+        If e.KeyChar <> ChrW(Keys.Back) Then
+            ' if a number key is clicked then it is inputted into the textbox
+            If Char.IsNumber(e.KeyChar) Then
+            Else
+                e.Handled = True
+            End If
+        End If
+    End Sub
+
+    Private Sub txtDietInquiries_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtDietInquiries.KeyPress
+        ' does not allow the input of any characters other than backspace
+        If e.KeyChar <> ChrW(Keys.Back) Then
+            ' if a letter key is clicked then it is inputted into the textbox
+            If Char.IsLetter(e.KeyChar) Then
+            Else
+                e.Handled = True
+            End If
+        End If
+    End Sub
+
+    Private Sub txtProductName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtProductName.KeyPress
+        ' does not allow the input of any characters other than backspace
+        If e.KeyChar <> ChrW(Keys.Back) Then
+            ' If a letter key is clicked then it is inputted into the textbox
+            If Char.IsLetter(e.KeyChar) Then
+            Else
+                e.Handled = True
+            End If
+        End If
+    End Sub
+
+    Private Sub txtProductType_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtProductType.KeyPress
+        ' does not allow the input of any characters other than backspace
+        If e.KeyChar <> ChrW(Keys.Back) Then
+            ' if a letter key is clicked then it is inputted into the textbox
+            If Char.IsLetter(e.KeyChar) Then
+            Else
+                e.Handled = True
+            End If
+        End If
     End Sub
 End Class
