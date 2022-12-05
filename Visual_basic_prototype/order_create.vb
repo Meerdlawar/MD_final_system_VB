@@ -8,13 +8,10 @@ Public Class order_create
     ' product_ID is predefined as a String and an empty value
     Dim product_ID As String = ""
 
-
     Private Sub order_create_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        cmbProductOrderPopulate()
-        cmbCustomerOrderPopulate()
     End Sub
 
-    Private Sub cmbProductOrderPopulate()
+    Shared Function cmbProductOrderPopulate()
         ' try catch implemented to prevent the program from stopping if the query fails
         Try
             GLOBALS.myqry = "SELECT product_name FROM tblProducts;"
@@ -24,17 +21,17 @@ Public Class order_create
             GLOBALS.mydr = GLOBALS.mycmd.ExecuteReader
 
             While GLOBALS.mydr.Read
-                cmbProductOrder.Items.Add(GLOBALS.mydr("product_name"))
+                order_create.cmbProductOrder.Items.Add(GLOBALS.mydr("product_name"))
             End While
 
             ' displays message if query fails
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-    End Sub
+        Return ""
+    End Function
 
-
-    Private Sub cmbCustomerOrderPopulate()
+    Shared Function cmbCustomerOrderPopulate()
         Try
             GLOBALS.myqry = "SELECT full_name FROM tblCustomers;"
             ' a new command is set up
@@ -43,14 +40,15 @@ Public Class order_create
             GLOBALS.mydr = GLOBALS.mycmd.ExecuteReader
 
             While GLOBALS.mydr.Read
-                cmbCustomerOrder.Items.Add(GLOBALS.mydr("full_name"))
+                order_create.cmbCustomerOrder.Items.Add(GLOBALS.mydr("full_name"))
             End While
 
             ' displays message if query fails
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-    End Sub
+        Return ""
+    End Function
 
     Private Sub addProductDGV()
         ' checks if an item in the combo box has been seleceted
@@ -82,8 +80,6 @@ Public Class order_create
         End If
     End Sub
 
-
-
     Private Sub addOrder()
         ' variable customerID declared as integer
         Dim customerID As Integer
@@ -102,7 +98,6 @@ Public Class order_create
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-
 
         Try
             GLOBALS.myqry = "INSERT INTO tblOrders([customerID], [total_price], [method_of_payment], [order_Placed], [order_due], [comments]) VALUES(?,?,?,?,?,?)"
@@ -124,7 +119,6 @@ Public Class order_create
     End Sub
 
     Private Sub addOrderProduct()
-
         Try
             GLOBALS.myqry = "SELECT TOP 1 orderID FROM tblOrders ORDER BY orderID DESC"
             'initialising a new command with the connection and query with it
@@ -138,9 +132,8 @@ Public Class order_create
             End While
 
         Catch ex As Exception
-
+            MsgBox(ex.Message)
         End Try
-
 
         ' try catch that displays an error message if the query fails
         Try
@@ -166,9 +159,7 @@ Public Class order_create
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-
     End Sub
-
 
     Private Sub totalPrice()
         ' variable is assigned the value 0 
@@ -181,9 +172,6 @@ Public Class order_create
         ' the labels text is displays the totalbalance
         lblTotalPrice.Text = "Total Price:" & "" & totalbalance
     End Sub
-
-
-
 
     Shared Function populateDGV()
         order_create.orderCreateDGV.Rows.Clear()
@@ -209,7 +197,6 @@ Public Class order_create
     End Function
 
     Shared Function populatecombobox()
-
         Try
             GLOBALS.myqry = "SELECT tblCustomers.full_name
                              FROM tblCustomers INNER JOIN tblOrders
@@ -224,7 +211,7 @@ Public Class order_create
             End While
 
         Catch ex As Exception
-
+            MsgBox(ex.Message)
         End Try
 
         Try
@@ -239,15 +226,12 @@ Public Class order_create
             End While
 
         Catch ex As Exception
-
+            MsgBox(ex.Message)
         End Try
-
         Return ""
     End Function
 
-
     Shared Function populateDataTimePicker()
-
         Try
             GLOBALS.myqry = "SELECT order_Placed FROM tblOrders WHERE tblOrders.orderID = @order;"
 
@@ -259,9 +243,8 @@ Public Class order_create
                 order_create.DateTimePickerPlaced.Value = (GLOBALS.mydr("order_placed"))
             End While
         Catch ex As Exception
-
+            MsgBox(ex.Message)
         End Try
-
 
         Try
             GLOBALS.myqry = "SELECT order_due FROM tblOrders WHERE tblOrders.orderID = @order;"
@@ -274,10 +257,8 @@ Public Class order_create
                 order_create.DateTimePickerDue.Value = (GLOBALS.mydr("order_due"))
             End While
         Catch ex As Exception
-
+            MsgBox(ex.Message)
         End Try
-
-
         Return ""
     End Function
 
@@ -293,7 +274,7 @@ Public Class order_create
                 order_create.txtboxComments.Text = (GLOBALS.mydr("comments"))
             End While
         Catch ex As Exception
-
+            MsgBox(ex.Message)
         End Try
         Return ""
     End Function
@@ -304,8 +285,6 @@ Public Class order_create
         order_create.btnSaveOrder.Enabled = True
         Return ""
     End Function
-
-
 
     Shared Function editOrder()
         ' displays error message if text boxes are empty
@@ -364,7 +343,6 @@ Public Class order_create
         End If
         Return ""
     End Function
-
 
     Shared Function editOrderProduct()
         Try
@@ -426,7 +404,6 @@ Public Class order_create
         Return ""
     End Function
 
-
     Private Sub btnBackOrderCreate_Click(sender As Object, e As EventArgs) Handles btnBackOrderCreate.Click
         Me.Hide()
         order_history.Show()
@@ -435,6 +412,8 @@ Public Class order_create
         cmbPaymentMethod.Text = String.Empty
         txtboxComments.Clear()
         orderCreateDGV.Rows.Clear()
+        cmbProductOrder.Items.Clear()
+        cmbCustomerOrder.Items.Clear()
     End Sub
 
     Private Sub btnAddProduct_Click(sender As Object, e As EventArgs) Handles btnAddProduct.Click

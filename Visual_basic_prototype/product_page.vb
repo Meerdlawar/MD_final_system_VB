@@ -9,10 +9,6 @@ Public Class product_page
         loadDatagridView()
     End Sub
 
-
-
-
-
     Public Sub loadDatagridView()
         controls1()
         ' try catch implemented to display user friendly message incase the query fails
@@ -36,7 +32,6 @@ Public Class product_page
             MsgBox(ex.Message)
         End Try
     End Sub
-
 
     Private Sub AddRecord()
         If txtProductName.Text = "" Or txtProductPrice.Text = "" Or txtProductType.Text = "" Or txtDietInquiries.Text = "" Then
@@ -71,7 +66,6 @@ Public Class product_page
         End If
     End Sub
 
-
     Private Sub DeleteRecord()
         ' try catch incase query fails
         Try
@@ -103,7 +97,6 @@ Public Class product_page
         ' Loads an updated version of the data grid view
         loadDatagridView()
     End Sub
-
 
     Private Sub EditRecord()
         ' displays error message if text boxes are empty
@@ -153,7 +146,6 @@ Public Class product_page
         End If
     End Sub
 
-
     Private Sub searchItem()
         ' when nothing is in the search textbox then all records from tblProducts are displayed
         If txtProductSearch.Text = "" Then
@@ -185,7 +177,6 @@ Public Class product_page
             End Try
         End If
     End Sub
-
 
     Private Sub cleartxtbox()
         'clears ID textbox
@@ -269,7 +260,6 @@ Public Class product_page
         ' clears all the text boxes
         cleartxtbox()
     End Sub
-
 
     Private Sub txtProductSearch_TextChanged(sender As Object, e As EventArgs) Handles txtProductSearch.TextChanged
         ' search function is called

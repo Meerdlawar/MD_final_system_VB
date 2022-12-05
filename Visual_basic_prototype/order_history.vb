@@ -94,24 +94,23 @@ Public Class order_history
             order_create.populatecombobox()
             order_create.populateDataTimePicker()
             order_create.populatetxtbox()
+            order_create.cmbCustomerOrderPopulate()
+            order_create.cmbProductOrderPopulate()
         End If
         Return ""
     End Function
-
-
-
-
-
 
     Private Sub btnOrderBack_Click(sender As Object, e As EventArgs) Handles btnOrderBack.Click
         Me.Hide()
         main_menu.Show()
     End Sub
 
-    Private Sub btnOrderAdd_Click(sender As Object, e As EventArgs) Handles btnOrderCreate.Click
+    Private Sub btnOrderCreate_Click(sender As Object, e As EventArgs) Handles btnOrderCreate.Click
         Me.Hide()
         order_create.Show()
         order_create.controls1()
+        order_create.cmbCustomerOrderPopulate()
+        order_create.cmbProductOrderPopulate()
     End Sub
 
     Private Sub btnHistoryDelete_Click(sender As Object, e As EventArgs) Handles btnHistoryDelete.Click
