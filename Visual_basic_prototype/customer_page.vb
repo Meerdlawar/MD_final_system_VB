@@ -313,5 +313,69 @@ Public Class customer_page
         saveFunc()
     End Sub
 
+    Private Sub txtCustomerEmail_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCustomerEmail.KeyPress
+        ' does not allow the input of any characters other than backspace
+        If e.KeyChar <> ChrW(Keys.Back) Then
+            ' if a letter key is clicked then it is inputted into the textbox
+            If Char.IsLetter(e.KeyChar) Then
+            Else
+                e.Handled = True
+            End If
+        End If
+    End Sub
 
+    Private Sub txtCustomerFname_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCustomerFname.KeyPress
+        ' does not allow the input of any characters other than backspace
+        If e.KeyChar <> ChrW(Keys.Back) Then
+            ' if a letter key is clicked then it is inputted into the textbox
+            If Char.IsLetter(e.KeyChar) Then
+            Else
+                e.Handled = True
+            End If
+        End If
+    End Sub
+
+    Private Sub txtCustomerLname_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCustomerLname.KeyPress
+        ' does not allow the input of any characters other than backspace
+        If e.KeyChar <> ChrW(Keys.Back) Then
+            ' if a letter key is clicked then it is inputted into the textbox
+            If Char.IsLetter(e.KeyChar) Then
+            Else
+                e.Handled = True
+            End If
+        End If
+    End Sub
+
+    Private Sub txtCustomerNumber_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCustomerNumber.KeyPress
+        ' does not allow the input of any characters other than backspace
+        If e.KeyChar <> ChrW(Keys.Back) Then
+            ' if a letter key is clicked then it is inputted into the textbox
+            If Char.IsDigit(e.KeyChar) Then
+            Else
+                e.Handled = True
+            End If
+        End If
+    End Sub
+
+    Private Sub txtCustomerPrefix_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCustomerPrefix.KeyPress
+        ' does not allow the input of any characters other than backspace
+        If e.KeyChar <> ChrW(Keys.Back) Then
+            ' if a letter key is clicked then it is inputted into the textbox
+            If Char.IsLetter(e.KeyChar) Then
+            Else
+                e.Handled = True
+            End If
+        End If
+    End Sub
+
+    Private Sub txtCustomerSubfix_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCustomerSubfix.KeyPress
+        ' does not allow the input of any characters other than backspace
+        If e.KeyChar <> ChrW(Keys.Back) Then
+            ' if a letter key is clicked then it is inputted into the textbox
+            If Char.IsLetter(e.KeyChar) Then
+            Else
+                e.Handled = True
+            End If
+        End If
+    End Sub
 End Class
