@@ -29,6 +29,7 @@ Partial Class login
         Me.Username = New System.Windows.Forms.Label()
         Me.Password = New System.Windows.Forms.Label()
         Me.showpassCB = New System.Windows.Forms.CheckBox()
+        Me.btnExit = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'txtpassword
@@ -91,11 +92,21 @@ Partial Class login
         Me.showpassCB.Text = "Show Password"
         Me.showpassCB.UseVisualStyleBackColor = True
         '
+        'btnExit
+        '
+        Me.btnExit.Location = New System.Drawing.Point(674, 388)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(114, 50)
+        Me.btnExit.TabIndex = 7
+        Me.btnExit.Text = "Exit"
+        Me.btnExit.UseVisualStyleBackColor = True
+        '
         'login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.showpassCB)
         Me.Controls.Add(Me.Password)
         Me.Controls.Add(Me.Username)
@@ -117,4 +128,5 @@ Partial Class login
     Friend WithEvents Username As Label
     Friend WithEvents Password As Label
     Friend WithEvents showpassCB As CheckBox
+    Friend WithEvents btnExit As Button
 End Class
