@@ -25,7 +25,6 @@ Partial Class order_history
         Me.btnOrderCreate = New System.Windows.Forms.Button()
         Me.btnOrderBack = New System.Windows.Forms.Button()
         Me.orderDGV = New System.Windows.Forms.DataGridView()
-        Me.btnHistoryDelete = New System.Windows.Forms.Button()
         Me.orderID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.customerID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.total_price = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -34,6 +33,7 @@ Partial Class order_history
         Me.order_due = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.comments = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnproducts = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.btnHistoryDelete = New System.Windows.Forms.Button()
         CType(Me.orderDGV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -63,15 +63,6 @@ Partial Class order_history
         Me.orderDGV.Name = "orderDGV"
         Me.orderDGV.Size = New System.Drawing.Size(843, 437)
         Me.orderDGV.TabIndex = 11
-        '
-        'btnHistoryDelete
-        '
-        Me.btnHistoryDelete.Location = New System.Drawing.Point(977, 165)
-        Me.btnHistoryDelete.Name = "btnHistoryDelete"
-        Me.btnHistoryDelete.Size = New System.Drawing.Size(105, 37)
-        Me.btnHistoryDelete.TabIndex = 13
-        Me.btnHistoryDelete.Text = "Delete"
-        Me.btnHistoryDelete.UseVisualStyleBackColor = True
         '
         'orderID
         '
@@ -123,11 +114,20 @@ Partial Class order_history
         Me.btnproducts.Text = "Edit/View products"
         Me.btnproducts.UseColumnTextForButtonValue = True
         '
+        'btnHistoryDelete
+        '
+        Me.btnHistoryDelete.Location = New System.Drawing.Point(977, 165)
+        Me.btnHistoryDelete.Name = "btnHistoryDelete"
+        Me.btnHistoryDelete.Size = New System.Drawing.Size(105, 37)
+        Me.btnHistoryDelete.TabIndex = 13
+        Me.btnHistoryDelete.Text = "Delete"
+        Me.btnHistoryDelete.UseVisualStyleBackColor = True
+        '
         'order_history
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1406, 627)
+        Me.ClientSize = New System.Drawing.Size(1129, 627)
         Me.Controls.Add(Me.btnHistoryDelete)
         Me.Controls.Add(Me.orderDGV)
         Me.Controls.Add(Me.btnOrderBack)

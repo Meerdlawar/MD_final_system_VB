@@ -9,6 +9,7 @@ Public Class order_create
     Dim product_ID As String = ""
 
     Private Sub order_create_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 
     Shared Function cmbProductOrderPopulate()
@@ -407,12 +408,19 @@ Public Class order_create
     Private Sub btnBackOrderCreate_Click(sender As Object, e As EventArgs) Handles btnBackOrderCreate.Click
         Me.Hide()
         order_history.Show()
+        ' clear whatever text is in the combobox
         cmbProductOrder.Text = String.Empty
+        ' clears whatever text is in the combobox
         cmbCustomerOrder.Text = String.Empty
+        ' clears whatever text is in the combobox
         cmbPaymentMethod.Text = String.Empty
+        ' clear whatever text is int the textbox
         txtboxComments.Clear()
+        ' empties all the rows in the data-grid view
         orderCreateDGV.Rows.Clear()
+        ' Clears all the items in the combobox
         cmbProductOrder.Items.Clear()
+        ' Clears all the items in the combobox
         cmbCustomerOrder.Items.Clear()
     End Sub
 
