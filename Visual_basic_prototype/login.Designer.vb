@@ -34,25 +34,25 @@ Partial Class login
         '
         'txtpassword
         '
-        Me.txtpassword.Location = New System.Drawing.Point(308, 210)
+        Me.txtpassword.Location = New System.Drawing.Point(312, 210)
         Me.txtpassword.Name = "txtpassword"
         Me.txtpassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtpassword.Size = New System.Drawing.Size(135, 20)
-        Me.txtpassword.TabIndex = 0
+        Me.txtpassword.TabIndex = 1
         '
         'txtusername
         '
         Me.txtusername.Location = New System.Drawing.Point(308, 187)
         Me.txtusername.Name = "txtusername"
         Me.txtusername.Size = New System.Drawing.Size(135, 20)
-        Me.txtusername.TabIndex = 1
+        Me.txtusername.TabIndex = 0
         '
         'btnlogin
         '
         Me.btnlogin.Location = New System.Drawing.Point(329, 259)
         Me.btnlogin.Name = "btnlogin"
         Me.btnlogin.Size = New System.Drawing.Size(75, 23)
-        Me.btnlogin.TabIndex = 2
+        Me.btnlogin.TabIndex = 4
         Me.btnlogin.Text = "login"
         Me.btnlogin.UseVisualStyleBackColor = True
         '
@@ -88,7 +88,7 @@ Partial Class login
         Me.showpassCB.Location = New System.Drawing.Point(317, 236)
         Me.showpassCB.Name = "showpassCB"
         Me.showpassCB.Size = New System.Drawing.Size(102, 17)
-        Me.showpassCB.TabIndex = 6
+        Me.showpassCB.TabIndex = 3
         Me.showpassCB.Text = "Show Password"
         Me.showpassCB.UseVisualStyleBackColor = True
         '
@@ -97,7 +97,7 @@ Partial Class login
         Me.btnExit.Location = New System.Drawing.Point(674, 388)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(114, 50)
-        Me.btnExit.TabIndex = 7
+        Me.btnExit.TabIndex = 5
         Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = True
         '

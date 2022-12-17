@@ -54,7 +54,7 @@ Partial Class product_page
         Me.productDGV.Location = New System.Drawing.Point(12, 128)
         Me.productDGV.Name = "productDGV"
         Me.productDGV.Size = New System.Drawing.Size(496, 379)
-        Me.productDGV.TabIndex = 6
+        Me.productDGV.TabIndex = 0
         '
         'productID
         '
@@ -101,7 +101,7 @@ Partial Class product_page
         Me.txtProductSearch.Location = New System.Drawing.Point(382, 102)
         Me.txtProductSearch.Name = "txtProductSearch"
         Me.txtProductSearch.Size = New System.Drawing.Size(126, 20)
-        Me.txtProductSearch.TabIndex = 41
+        Me.txtProductSearch.TabIndex = 10
         '
         'Label7
         '
@@ -117,7 +117,7 @@ Partial Class product_page
         Me.txtProductName.Location = New System.Drawing.Point(683, 177)
         Me.txtProductName.Name = "txtProductName"
         Me.txtProductName.Size = New System.Drawing.Size(241, 20)
-        Me.txtProductName.TabIndex = 35
+        Me.txtProductName.TabIndex = 1
         '
         'Label3
         '
@@ -133,7 +133,7 @@ Partial Class product_page
         Me.btnproductBack.Location = New System.Drawing.Point(949, 102)
         Me.btnproductBack.Name = "btnproductBack"
         Me.btnproductBack.Size = New System.Drawing.Size(84, 36)
-        Me.btnproductBack.TabIndex = 33
+        Me.btnproductBack.TabIndex = 11
         Me.btnproductBack.Text = "Back"
         Me.btnproductBack.UseVisualStyleBackColor = True
         '
@@ -142,7 +142,7 @@ Partial Class product_page
         Me.btnProductClear.Location = New System.Drawing.Point(822, 384)
         Me.btnProductClear.Name = "btnProductClear"
         Me.btnProductClear.Size = New System.Drawing.Size(105, 35)
-        Me.btnProductClear.TabIndex = 50
+        Me.btnProductClear.TabIndex = 7
         Me.btnProductClear.Text = "Clear"
         Me.btnProductClear.UseVisualStyleBackColor = True
         '
@@ -151,7 +151,7 @@ Partial Class product_page
         Me.btnproductDelete.Location = New System.Drawing.Point(711, 384)
         Me.btnproductDelete.Name = "btnproductDelete"
         Me.btnproductDelete.Size = New System.Drawing.Size(105, 35)
-        Me.btnproductDelete.TabIndex = 49
+        Me.btnproductDelete.TabIndex = 6
         Me.btnproductDelete.Text = "Delete"
         Me.btnproductDelete.UseVisualStyleBackColor = True
         '
@@ -160,7 +160,7 @@ Partial Class product_page
         Me.txtProductPrice.Location = New System.Drawing.Point(682, 216)
         Me.txtProductPrice.Name = "txtProductPrice"
         Me.txtProductPrice.Size = New System.Drawing.Size(241, 20)
-        Me.txtProductPrice.TabIndex = 48
+        Me.txtProductPrice.TabIndex = 2
         '
         'lblProductPrice
         '
@@ -176,7 +176,7 @@ Partial Class product_page
         Me.txtDietInquiries.Location = New System.Drawing.Point(682, 317)
         Me.txtDietInquiries.Name = "txtDietInquiries"
         Me.txtDietInquiries.Size = New System.Drawing.Size(241, 20)
-        Me.txtDietInquiries.TabIndex = 45
+        Me.txtDietInquiries.TabIndex = 4
         '
         'lblDietInquiries
         '
@@ -201,7 +201,7 @@ Partial Class product_page
         Me.btnproductAdd.Location = New System.Drawing.Point(600, 384)
         Me.btnproductAdd.Name = "btnproductAdd"
         Me.btnproductAdd.Size = New System.Drawing.Size(105, 35)
-        Me.btnproductAdd.TabIndex = 42
+        Me.btnproductAdd.TabIndex = 5
         Me.btnproductAdd.Text = "Add"
         Me.btnproductAdd.UseVisualStyleBackColor = True
         '
@@ -210,14 +210,14 @@ Partial Class product_page
         Me.txtProductType.Location = New System.Drawing.Point(682, 265)
         Me.txtProductType.Name = "txtProductType"
         Me.txtProductType.Size = New System.Drawing.Size(241, 20)
-        Me.txtProductType.TabIndex = 52
+        Me.txtProductType.TabIndex = 3
         '
         'btnProductSave
         '
         Me.btnProductSave.Location = New System.Drawing.Point(652, 426)
         Me.btnProductSave.Name = "btnProductSave"
         Me.btnProductSave.Size = New System.Drawing.Size(105, 35)
-        Me.btnProductSave.TabIndex = 54
+        Me.btnProductSave.TabIndex = 8
         Me.btnProductSave.Text = "Save"
         Me.btnProductSave.UseVisualStyleBackColor = True
         '
@@ -226,7 +226,7 @@ Partial Class product_page
         Me.btnProductCancel.Location = New System.Drawing.Point(763, 425)
         Me.btnProductCancel.Name = "btnProductCancel"
         Me.btnProductCancel.Size = New System.Drawing.Size(105, 36)
-        Me.btnProductCancel.TabIndex = 55
+        Me.btnProductCancel.TabIndex = 9
         Me.btnProductCancel.Text = "Cancel"
         Me.btnProductCancel.UseVisualStyleBackColor = True
         '

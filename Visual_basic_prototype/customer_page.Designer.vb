@@ -109,7 +109,7 @@ Partial Class customer_page
         Me.btncustomerCancel.Location = New System.Drawing.Point(1023, 505)
         Me.btncustomerCancel.Name = "btncustomerCancel"
         Me.btncustomerCancel.Size = New System.Drawing.Size(105, 36)
-        Me.btncustomerCancel.TabIndex = 71
+        Me.btncustomerCancel.TabIndex = 11
         Me.btncustomerCancel.Text = "Cancel"
         Me.btncustomerCancel.UseVisualStyleBackColor = True
         '
@@ -118,7 +118,7 @@ Partial Class customer_page
         Me.btncustomerSave.Location = New System.Drawing.Point(912, 506)
         Me.btncustomerSave.Name = "btncustomerSave"
         Me.btncustomerSave.Size = New System.Drawing.Size(105, 35)
-        Me.btncustomerSave.TabIndex = 70
+        Me.btncustomerSave.TabIndex = 10
         Me.btncustomerSave.Text = "Save"
         Me.btncustomerSave.UseVisualStyleBackColor = True
         '
@@ -128,14 +128,14 @@ Partial Class customer_page
         Me.txtCustomerPrefix.Location = New System.Drawing.Point(959, 133)
         Me.txtCustomerPrefix.Name = "txtCustomerPrefix"
         Me.txtCustomerPrefix.Size = New System.Drawing.Size(241, 20)
-        Me.txtCustomerPrefix.TabIndex = 69
+        Me.txtCustomerPrefix.TabIndex = 1
         '
         'btncustomerClear
         '
         Me.btncustomerClear.Location = New System.Drawing.Point(1082, 464)
         Me.btncustomerClear.Name = "btncustomerClear"
         Me.btncustomerClear.Size = New System.Drawing.Size(105, 35)
-        Me.btncustomerClear.TabIndex = 68
+        Me.btncustomerClear.TabIndex = 9
         Me.btncustomerClear.Text = "Clear"
         Me.btncustomerClear.UseVisualStyleBackColor = True
         '
@@ -144,7 +144,7 @@ Partial Class customer_page
         Me.btncustomerDelete.Location = New System.Drawing.Point(971, 464)
         Me.btncustomerDelete.Name = "btncustomerDelete"
         Me.btncustomerDelete.Size = New System.Drawing.Size(105, 35)
-        Me.btncustomerDelete.TabIndex = 67
+        Me.btncustomerDelete.TabIndex = 8
         Me.btncustomerDelete.Text = "Delete"
         Me.btncustomerDelete.UseVisualStyleBackColor = True
         '
@@ -154,7 +154,7 @@ Partial Class customer_page
         Me.txtCustomerLname.Location = New System.Drawing.Point(959, 215)
         Me.txtCustomerLname.Name = "txtCustomerLname"
         Me.txtCustomerLname.Size = New System.Drawing.Size(241, 20)
-        Me.txtCustomerLname.TabIndex = 66
+        Me.txtCustomerLname.TabIndex = 3
         '
         'lblProductPrice
         '
@@ -171,7 +171,7 @@ Partial Class customer_page
         Me.txtCustomerNumber.Location = New System.Drawing.Point(959, 263)
         Me.txtCustomerNumber.Name = "txtCustomerNumber"
         Me.txtCustomerNumber.Size = New System.Drawing.Size(241, 20)
-        Me.txtCustomerNumber.TabIndex = 64
+        Me.txtCustomerNumber.TabIndex = 4
         '
         'lblDietInquiries
         '
@@ -196,7 +196,7 @@ Partial Class customer_page
         Me.btncustomerAdd.Location = New System.Drawing.Point(860, 464)
         Me.btncustomerAdd.Name = "btncustomerAdd"
         Me.btncustomerAdd.Size = New System.Drawing.Size(105, 35)
-        Me.btncustomerAdd.TabIndex = 61
+        Me.btncustomerAdd.TabIndex = 7
         Me.btncustomerAdd.Text = "Add"
         Me.btncustomerAdd.UseVisualStyleBackColor = True
         '
@@ -206,7 +206,7 @@ Partial Class customer_page
         Me.txtCustomerFname.Location = New System.Drawing.Point(960, 176)
         Me.txtCustomerFname.Name = "txtCustomerFname"
         Me.txtCustomerFname.Size = New System.Drawing.Size(241, 20)
-        Me.txtCustomerFname.TabIndex = 58
+        Me.txtCustomerFname.TabIndex = 2
         '
         'Label3
         '
@@ -222,7 +222,7 @@ Partial Class customer_page
         Me.btncustomerBack.Location = New System.Drawing.Point(1251, 65)
         Me.btncustomerBack.Name = "btncustomerBack"
         Me.btncustomerBack.Size = New System.Drawing.Size(84, 36)
-        Me.btncustomerBack.TabIndex = 56
+        Me.btncustomerBack.TabIndex = 13
         Me.btncustomerBack.Text = "Back"
         Me.btncustomerBack.UseVisualStyleBackColor = True
         '
@@ -232,7 +232,7 @@ Partial Class customer_page
         Me.txtCustomerEmail.Location = New System.Drawing.Point(959, 311)
         Me.txtCustomerEmail.Name = "txtCustomerEmail"
         Me.txtCustomerEmail.Size = New System.Drawing.Size(241, 20)
-        Me.txtCustomerEmail.TabIndex = 73
+        Me.txtCustomerEmail.TabIndex = 5
         '
         'Label1
         '
@@ -249,7 +249,7 @@ Partial Class customer_page
         Me.txtCustomerSubfix.Location = New System.Drawing.Point(959, 354)
         Me.txtCustomerSubfix.Name = "txtCustomerSubfix"
         Me.txtCustomerSubfix.Size = New System.Drawing.Size(241, 20)
-        Me.txtCustomerSubfix.TabIndex = 75
+        Me.txtCustomerSubfix.TabIndex = 6
         '
         'Label2
         '
@@ -266,7 +266,7 @@ Partial Class customer_page
         Me.txtCustomerSearch.Location = New System.Drawing.Point(516, 49)
         Me.txtCustomerSearch.Name = "txtCustomerSearch"
         Me.txtCustomerSearch.Size = New System.Drawing.Size(241, 20)
-        Me.txtCustomerSearch.TabIndex = 76
+        Me.txtCustomerSearch.TabIndex = 12
         '
         'Label4
         '

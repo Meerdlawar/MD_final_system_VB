@@ -43,7 +43,7 @@ Partial Class main_menu
         Me.btnCustomer_order_history.Location = New System.Drawing.Point(329, 216)
         Me.btnCustomer_order_history.Name = "btnCustomer_order_history"
         Me.btnCustomer_order_history.Size = New System.Drawing.Size(192, 23)
-        Me.btnCustomer_order_history.TabIndex = 1
+        Me.btnCustomer_order_history.TabIndex = 2
         Me.btnCustomer_order_history.Text = "Customer Order History"
         Me.btnCustomer_order_history.UseVisualStyleBackColor = True
         '
@@ -61,7 +61,7 @@ Partial Class main_menu
         Me.btnExit.Location = New System.Drawing.Point(329, 274)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(192, 23)
-        Me.btnExit.TabIndex = 5
+        Me.btnExit.TabIndex = 4
         Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = True
         '
@@ -70,7 +70,7 @@ Partial Class main_menu
         Me.btnCustomers.Location = New System.Drawing.Point(329, 187)
         Me.btnCustomers.Name = "btnCustomers"
         Me.btnCustomers.Size = New System.Drawing.Size(192, 23)
-        Me.btnCustomers.TabIndex = 6
+        Me.btnCustomers.TabIndex = 1
         Me.btnCustomers.Text = "Customers"
         Me.btnCustomers.UseVisualStyleBackColor = True
         '

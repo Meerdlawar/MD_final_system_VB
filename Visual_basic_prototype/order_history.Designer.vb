@@ -42,7 +42,7 @@ Partial Class order_history
         Me.btnOrderCreate.Location = New System.Drawing.Point(977, 122)
         Me.btnOrderCreate.Name = "btnOrderCreate"
         Me.btnOrderCreate.Size = New System.Drawing.Size(105, 37)
-        Me.btnOrderCreate.TabIndex = 9
+        Me.btnOrderCreate.TabIndex = 2
         Me.btnOrderCreate.Text = "Create Order"
         Me.btnOrderCreate.UseVisualStyleBackColor = True
         '
@@ -51,7 +51,7 @@ Partial Class order_history
         Me.btnOrderBack.Location = New System.Drawing.Point(977, 79)
         Me.btnOrderBack.Name = "btnOrderBack"
         Me.btnOrderBack.Size = New System.Drawing.Size(105, 37)
-        Me.btnOrderBack.TabIndex = 10
+        Me.btnOrderBack.TabIndex = 1
         Me.btnOrderBack.Text = "Back"
         Me.btnOrderBack.UseVisualStyleBackColor = True
         '
@@ -62,7 +62,7 @@ Partial Class order_history
         Me.orderDGV.Location = New System.Drawing.Point(56, 79)
         Me.orderDGV.Name = "orderDGV"
         Me.orderDGV.Size = New System.Drawing.Size(843, 437)
-        Me.orderDGV.TabIndex = 11
+        Me.orderDGV.TabIndex = 0
         '
         'orderID
         '
@@ -119,7 +119,7 @@ Partial Class order_history
         Me.btnHistoryDelete.Location = New System.Drawing.Point(977, 165)
         Me.btnHistoryDelete.Name = "btnHistoryDelete"
         Me.btnHistoryDelete.Size = New System.Drawing.Size(105, 37)
-        Me.btnHistoryDelete.TabIndex = 13
+        Me.btnHistoryDelete.TabIndex = 3
         Me.btnHistoryDelete.Text = "Delete"
         Me.btnHistoryDelete.UseVisualStyleBackColor = True
         '

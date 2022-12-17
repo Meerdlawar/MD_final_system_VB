@@ -103,12 +103,6 @@
     <Compile Include="customer_page.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="edit_product_page.Designer.vb">
-      <DependentUpon>edit_product_page.vb</DependentUpon>
-    </Compile>
-    <Compile Include="edit_product_page.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="order_create.Designer.vb">
       <DependentUpon>order_create.vb</DependentUpon>
     </Compile>
@@ -166,9 +160,6 @@
   <ItemGroup>
     <EmbeddedResource Include="customer_page.resx">
       <DependentUpon>customer_page.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="edit_product_page.resx">
-      <DependentUpon>edit_product_page.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="order_create.resx">
       <DependentUpon>order_create.vb</DependentUpon>
