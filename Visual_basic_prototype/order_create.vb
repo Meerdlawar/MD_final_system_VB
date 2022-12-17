@@ -3,10 +3,6 @@
 Public Class order_create
     ' variable totalbalance is perdefined as a decimal and value of 0
     Dim totalbalance As Decimal = 0
-    ' variable order_ID is predefined as a String and an empty value
-    Dim order_ID As String = ""
-    ' product_ID is predefined as a String and an empty value
-    Dim product_ID As String = ""
 
     Private Sub order_create_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -120,6 +116,8 @@ Public Class order_create
     End Sub
 
     Private Sub addOrderProduct()
+        ' variable order_ID is predefined as a String and an empty value
+        Dim order_ID As String = ""
         Try
             GLOBALS.myqry = "SELECT TOP 1 orderID FROM tblOrders ORDER BY orderID DESC"
             'initialising a new command with the connection and query with it
