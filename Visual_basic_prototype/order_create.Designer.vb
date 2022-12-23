@@ -117,7 +117,6 @@ Partial Class order_create
         'cmbCustomerOrder
         '
         Me.cmbCustomerOrder.FormattingEnabled = True
-        Me.cmbCustomerOrder.Items.AddRange(New Object() {"New customer"})
         Me.cmbCustomerOrder.Location = New System.Drawing.Point(144, 154)
         Me.cmbCustomerOrder.Name = "cmbCustomerOrder"
         Me.cmbCustomerOrder.Size = New System.Drawing.Size(121, 21)

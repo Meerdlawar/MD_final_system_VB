@@ -36,6 +36,7 @@ Public Class order_create
             ' the data reader executes the command
             GLOBALS.mydr = GLOBALS.mycmd.ExecuteReader
 
+            order_create.cmbCustomerOrder.Items.Add("New Customer")
             While GLOBALS.mydr.Read
                 order_create.cmbCustomerOrder.Items.Add(GLOBALS.mydr("full_name"))
             End While
@@ -279,8 +280,11 @@ Public Class order_create
     End Function
 
     Shared Function access()
+        ' the create button is disabled
         order_create.btnCreate.Enabled = False
+        ' the remove buttons is enabled
         order_create.btnremove.Enabled = True
+        ' the save button is enabled
         order_create.btnSaveOrder.Enabled = True
         Return ""
     End Function
@@ -392,13 +396,17 @@ Public Class order_create
     End Function
 
     Shared Function controls1()
+        ' the save button is disabled
         order_create.btnSaveOrder.Enabled = False
+        ' the create buttons is enabled
         order_create.btnCreate.Enabled = True
         Return ""
     End Function
 
     Shared Function controls2()
+        ' the save button is enabled
         order_create.btnSaveOrder.Enabled = True
+        ' the save buttons is disabled
         order_create.btnCreate.Enabled = False
         Return ""
     End Function
@@ -427,13 +435,16 @@ Public Class order_create
     End Sub
 
     Private Sub btnremove_Click(sender As Object, e As EventArgs) Handles btnremove.Click
+        ' if there are more than 0 rows in the data grid view
         If orderCreateDGV.SelectedRows.Count > 0 Then
+            ' the selected row will be deleted
             orderCreateDGV.Rows.RemoveAt(orderCreateDGV.CurrentRow.Index)
         End If
         totalPrice()
     End Sub
 
     Private Sub cmbCustomerOrder_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbCustomerOrder.SelectedIndexChanged
+        ' if "New customer" is selected in the combo box, it closes the current page and opens the customer page
         If cmbCustomerOrder.Text = "New customer" Then
             Me.Hide()
             customer_page.Show()
@@ -441,10 +452,12 @@ Public Class order_create
     End Sub
 
     Private Sub btnCreate_Click(sender As Object, e As EventArgs) Handles btnCreate.Click
-        If orderCreateDGV.RowCount > 1 Then
+        ' if the rows are greater than 1 then the two functions are called
+        If orderCreateDGV.RowCount > 0 Then
             addOrder()
             addOrderProduct()
         Else
+            ' 
             MsgBox("An order cannot be created without products")
         End If
 

@@ -57,6 +57,7 @@ Partial Class order_history
         '
         'orderDGV
         '
+        Me.orderDGV.AllowUserToAddRows = False
         Me.orderDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.orderDGV.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.orderID, Me.customerID, Me.total_price, Me.method_of_payment, Me.order_Placed, Me.order_due, Me.comments, Me.btnproducts})
         Me.orderDGV.Location = New System.Drawing.Point(56, 79)

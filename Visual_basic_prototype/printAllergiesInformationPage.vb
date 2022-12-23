@@ -13,8 +13,9 @@ Public Class printAllergiesInformationPage
     End Sub
 
     Private Sub printPreview()
-        ' 
+        ' sets the document to be previewed
         PrintPreviewDialog1.Document = PrintDocument1
+        ' The document is put in preveiew mode
         PrintPreviewDialog1.ShowDialog()
     End Sub
 
