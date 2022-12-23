@@ -198,6 +198,7 @@ Public Class order_create
 
     Shared Function populatecombobox()
         Try
+            ' query selects the customer ID where
             GLOBALS.myqry = "SELECT tblCustomers.full_name
                              FROM tblCustomers INNER JOIN tblOrders
                              ON tblCustomers.customerID = tblOrders.customerID WHERE tblOrders.orderID = @order;"
