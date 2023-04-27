@@ -108,9 +108,9 @@ Partial Class product_page
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(379, 86)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(44, 13)
+        Me.Label7.Size = New System.Drawing.Size(84, 13)
         Me.Label7.TabIndex = 40
-        Me.Label7.Text = "Search:"
+        Me.Label7.Text = "Search Product:"
         '
         'txtProductName
         '
