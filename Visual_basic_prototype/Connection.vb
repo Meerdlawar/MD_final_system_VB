@@ -22,7 +22,7 @@ Module Connection
                     ' if the connection is open, then close it
                     If .State = ConnectionState.Open Then .Close()
                     ' connection string defined
-                    .ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=prototype_DB(final version).accdb"
+                    .ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=SD_prototype_DB(final version).accdb"
                     .Open()
                 End With
                 ' if query fails a message is outputted to stop the program from failing
